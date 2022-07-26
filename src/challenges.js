@@ -2,12 +2,11 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  }
-  else if (param1 === false && param2 === false) {
+  } else if (param1 === false && param2 === false) {
     return false;
+  } else {
+  return false; 
   }
-  return false;
-
 }
 
 // Desafio 2
@@ -34,7 +33,6 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
-
 }
 
 // Desafio 6
@@ -42,22 +40,17 @@ function highestCount(numeros) {
   let cont = 0;
   let maiorNumero = numeros[0];
   for (let index = 0; index < numeros.length; index += 1) {
-    for (let index2 = 1; index2 < numeros.length; index2 += 1) {
-      if (numeros[index] > numeros[index2]) {
-        maiorNumero = numeros[index];
-      }
-      else {
-        maiorNumero = numeros[index2];
-      }
-      
-      if (maiorNumero === numeros[index]) {
-        cont += 1;
-      }
+    if (numeros[index] > maiorNumero) {
+      maiorNumero = numeros[index];
+    }
+  }
+  for (let index2 = 0; index2 < numeros.length; index2 += 1) {
+    if (maiorNumero === numeros[index2]) {
+      cont += 1;
     }
   }
   return cont;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -65,8 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaDois = Math.abs(mouse - cat2);
   if (distanciaUm < distanciaDois) {
     return 'cat1';
-  }
-  else if (distanciaDois < distanciaUm) {
+  } else if (distanciaDois < distanciaUm) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -78,32 +70,29 @@ function fizzBuzz(inteiros) {
   for (let numb of inteiros) {
     if (numb % 3 === 0 && numb % 5 === 0) {
       resultado.push('fizzBuzz');
-    }
-    else if (numb % 3 === 0) {
+    } else if (numb % 3 === 0) {
       resultado.push('fizz');
-    }
-    else if (numb % 5 === 0) {
+    } else if (numb % 5 === 0) {
       resultado.push('buzz');
-    }
-    else {
+    } else {
       resultado.push('bug!');
     }
   }
   return resultado;
 }
-console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode(string) {
 
 }
+console.log(encode('hello'));
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
 function techList(array, string) {
-  // seu código aqui
+
 }
 
 module.exports = {
