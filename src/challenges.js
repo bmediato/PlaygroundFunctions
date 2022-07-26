@@ -12,41 +12,59 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-let area = (base*height)/2;
-return area;
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
- const myArray = string.split(" "); //divide as palavras
- return myArray;
+  const myArray = string.split(" "); //divide as palavras
+  return myArray;
 }
 
 // Desafio 4
 function concatName(array) {
-let primeiraPalavra = array[array.length -1]; //acessar ultimo elemento
-let segundaPalavra = array[0];
-let result = primeiraPalavra.concat(", ",segundaPalavra);
-return result;
+  let primeiraPalavra = array[array.length - 1]; //acessar ultimo elemento
+  let segundaPalavra = array[0];
+  let result = primeiraPalavra.concat(", ", segundaPalavra);
+  return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
-  
+
 }
 
-console.log(footballPoints(14,8));
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let cont = 0;
+  let maiorNumero = numeros[0];
+  for (let index = 1; index < numeros.length; index += 1) {
+    if (numeros[index] < maiorNumero) {
+      maiorNumero = numeros[index];
+    }
+  }
+  for (let index2 of numeros) {
+    if (maiorNumero === numeros[index2]) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaUm = Math.abs(mouse - cat1);
+  let distanciaDois = Math.abs(mouse - cat2);
+  if (distanciaUm < distanciaDois) {
+    return 'cat1';
+  }
+  else if (distanciaDois < distanciaUm) {
+  return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
