@@ -18,7 +18,8 @@ return area;
 
 // Desafio 3
 function splitSentence(string) {
-  // seu código aqui
+ const myArray = string.split(" "); //divide as palavras
+ return myArray;
 }
 
 // Desafio 4
