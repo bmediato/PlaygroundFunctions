@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
   } else if (param1 === false && param2 === false) {
     return false;
   } else {
-  return false; 
+    return false;
   }
 }
 
@@ -17,13 +17,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  const myArray = string.split(" "); //divide as palavras
+  const myArray = string.split(' '); // divide as palavras
   return myArray;
 }
 
 // Desafio 4
 function concatName(array) {
-  let primeiraPalavra = array[array.length - 1]; //acessar ultimo elemento
+  let primeiraPalavra = array[array.length - 1]; // acessar ultimo elemento
   let segundaPalavra = array[0];
   let result = primeiraPalavra.concat(", ", segundaPalavra);
   return result;
@@ -83,17 +83,38 @@ function fizzBuzz(inteiros) {
 
 // Desafio 9
 function encode(string) {
+  // let separa = 
+  // let modif = string.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
+  // console.log(modif);
 
+  // encode('How are you today?');
+  // encode('hello');
+  // encode('This is an encoding test');
+  // encode('go Trybe!');
 }
-console.log(encode('hello'));
+console.log(encode())
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
 function techList(array, string) {
+  array.sort();
+  let novoArray = [];
+  for (let index of array) {
+    if (array.length === 0) {
+      novoArray.push({tech:'Vazio!', name: string});
+      return novoArray
+    }
+    novoArray.push({
+      tech: index,
+      name: string
+    })
 
+  }
+  return novoArray;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
