@@ -23,9 +23,14 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+let primeiraPalavra = array[array.length -1]; //acessar ultimo elemento
+let segundaPalavra = array[0];
+let result = primeiraPalavra.concat(", ",segundaPalavra);
+return result;
 }
+
+
 
 // Desafio 5
 function footballPoints() {
