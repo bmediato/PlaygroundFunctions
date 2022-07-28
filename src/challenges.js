@@ -82,39 +82,29 @@ function fizzBuzz(inteiros) {
 }
 
 // Desafio 9
-function encode(string) {
-  // let separa = 
-  // let modif = string.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
-  // console.log(modif);
 
-  // encode('How are you today?');
-  // encode('hello');
-  // encode('This is an encoding test');
-  // encode('go Trybe!');
+function encode(string) {
+
 }
-console.log(encode())
-function decode() {
-  // seu código aqui
+function decode(string) {
+ 
 }
 
 // Desafio 10
 function techList(array, string) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
   array.sort();
   let novoArray = [];
-  for (let index of array) {
-    if (array.length === 0) {
-      novoArray.push({tech:'Vazio!', name: string});
-      return novoArray
-    }
+  for (let index = 0; index < array.length; index +=1) {
     novoArray.push({
-      tech: index,
+      tech: array[index],
       name: string
     })
-
   }
   return novoArray;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
