@@ -84,6 +84,13 @@ function fizzBuzz(inteiros) {
 // Desafio 9
 
 function encode(string) {
+const troca = {
+  'a': 1,
+  'e': 2,
+  'i': 3,
+  'o': 4,
+  'u': 5,
+}
 
 }
 function decode(string) {
